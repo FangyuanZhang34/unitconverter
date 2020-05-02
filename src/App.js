@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hi , I'am a Unit Converter~ (ฅ´ω`ฅ) </h1>
+        <h1>Hi , I'm a Unit Converter~ (ฅ´ω`ฅ) </h1>
         <hr></hr>
         <div className="Body">
           <InputNum 
