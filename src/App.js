@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import InputNum from './InputNum/InputNum.js';
 
@@ -18,29 +17,29 @@ class App extends Component {
 
   convertCm2Inch = (event) => {
     this.setState({
-      cm:event.target.value != 0 ? event.target.value : '0',
-      inch: event.target.value != 0 ? parseFloat(event.target.value) * 0.393701 : '0',
+      cm:event.target.value !== 0 ? event.target.value === '' ? '0' : event.target.value : '0',
+      inch: event.target.value !== 0 ? event.target.value === '' ? '0' : parseFloat(event.target.value) * 0.393701 : '0',
     })
   };
 
   convertInch2Cm = (event) => {
     this.setState({
-      cm:event.target.value != 0 ? parseFloat(event.target.value) * 2.54 : '0',
-      inch: event.target.value != 0 ? event.target.value : '0', 
+      cm:event.target.value !== 0 ? event.target.value === '' ? '0' : parseFloat(event.target.value) * 2.54 : '0',
+      inch: event.target.value !== 0 ? event.target.value === '' ? '0' : event.target.value : '0', 
     })
   };
 
   convertKg2Pound = (event) => {
     this.setState({
-      kg:event.target.value != 0 ? event.target.value : '0',
-      pound: event.target.value != 0 ? parseFloat(event.target.value) * 2.20462 : '0',
+      kg:event.target.value !== 0 ? event.target.value === '' ? '0' : event.target.value : '0',
+      pound: event.target.value !== 0 ? event.target.value === '' ? '0' : parseFloat(event.target.value) * 2.20462 : '0',
     })
   };
 
   convertPound2Kg = (event) => {
     this.setState({
-      kg:event.target.value != 0 ? parseFloat(event.target.value) * 0.453592 : '0',
-      pound: event.target.value != 0 ? event.target.value : '0', 
+      kg:event.target.value !== 0 ? event.target.value === '' ? '0' : parseFloat(event.target.value) * 0.453592 : '0',
+      pound: event.target.value !== 0 ? event.target.value === '' ? '0' : event.target.value : '0', 
     })
   };
 
